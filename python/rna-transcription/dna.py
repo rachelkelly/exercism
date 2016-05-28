@@ -11,3 +11,4 @@ def to_rna(code):
             stringy = stringy + 'A'
         elif (i == 'A'):
             stringy = stringy + 'U'
+    return stringy
