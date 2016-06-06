@@ -20,6 +20,7 @@ def word_count(sentence):
     sentdict = {}
     for key in sentlist: # iterate over every key in dict
         if key in sentdict: # if we've seen this key before, iterate up its value
+            sentdict[key] = 2
             #for key, j in sentdict.iteritems(key, j):
             #    sentdict.update(key=(j+1))
             #for i in key[i]: # not sure about this syntax
@@ -27,7 +28,7 @@ def word_count(sentence):
             #    sentdict.update(key=j) # or sentdict[key] = j ?
             #sentdict.update(key=(value+=1))
             # increment value by 1
-            pass
+            #pass
         else: # else condition only happens if it's the first time the word's been seen
             sentdict[key] = 1 # should only happen once
             sentdict.viewitems()
