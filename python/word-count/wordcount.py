@@ -18,15 +18,15 @@ def word_count(sentence):
 
     # populate new dict
     sentdict = {}
-    for key in sentlist:
-        if key in sentdict:
+    for key in sentlist: # iterate over every key in dict
+        if key in sentdict: # if we've seen this key before, iterate up its value
+            for i in get(key[, i]) # not sure about this syntax
+                j = i + 1              # make a quick new var to plug in
+                sentdict.update(key=j) # 
             #sentdict.update(key=(value+=1))
             # increment value by 1
             pass
-        else:
-            sentdict[key] = 1
-            # add new value to dict with value 1
-            # append (? - wrong word) to dict
-            pass
+        else: # else condition only happens if it's the first time the word's been seen
+            sentdict[key] = 1 # should only happen once
 
-word_count('The kids are okay kids')
+word_count('The kids are okay kids.')
