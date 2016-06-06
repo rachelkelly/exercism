@@ -4,10 +4,12 @@
 # Word Count exercism - Python
 #
 
-# Create list of incoming sentence with a for loop list append
-# Create empty dict.  For each new word add key to dict with value 1.
+# ! DONE # Create list of incoming sentence with a for loop list append
+# ! DONE # Create empty dict.  For each new word add key to dict with value 1.
  # if word already in dict, integer++ for dict item value
 # for each word, return a count
+# account for case too!
+# uh oh: gotta put WORDS into the list, not letters.
 
 def word_count(sentence):
     
@@ -30,12 +32,12 @@ def word_count(sentence):
             # increment value by 1
             #pass
         else: # else condition only happens if it's the first time the word's been seen
+            key.lower()
             sentdict[key] = 1 # should only happen once
             sentdict.viewitems()
         # if/else conditional happens for each word
 
     # return count
-    for key in sentdict:
-        pass        
+    return sentdict
 
 word_count('The kids are okay kids.')
