@@ -8,19 +8,21 @@
 # ! DONE # Create empty dict.  For each new word add key to dict with value 1.
  # if word already in dict, integer++ for dict item value
 # for each word, return a count
-# account for case too!
-# uh oh: gotta put WORDS into the list, not letters.
+# ! DONE # account for case too!
+# ! DONE # gotta put WORDS into the list, not letters.
+
+# need to import the string lib?
+from string import split
 
 def word_count(sentence):
     
     # turn the sent into a list for parsing
-    sentlist = []
-    for i in sentence:
-        sentlist.append(i)
+    sentlist = split(sentence.lower()) # split sentence into distinct words & lowercase them all
+    print sentlist
 
     # populate or add to new dict
     sentdict = {}
-    for key in sentlist: # iterate over every key in dict
+    for key in sentlist: # iterate over every key in dict - "key" is just an iterator to keep consistent
         if key in sentdict: # if we've seen this key before, iterate up its value
             sentdict[key] = 2
             #for key, j in sentdict.iteritems(key, j):
