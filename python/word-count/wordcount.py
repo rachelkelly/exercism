@@ -18,28 +18,18 @@ def word_count(sentence):
     
     # turn the sent into a list for parsing
     sentlist = split(sentence.lower()) # split sentence into distinct words & lowercase them all
-    print sentlist
 
-    # populate or add to new dict
+    # populate or add to new dict - create the empty dict, analyze each element 
+    # in sentlist, ++ value if seen more than once
     sentdict = {}
-    for key in sentlist: # iterate over every key in dict - "key" is just an iterator to keep consistent
-        if key in sentdict: # if we've seen this key before, iterate up its value
-            sentdict[key] = 2
-            #for key, j in sentdict.iteritems(key, j):
-            #    sentdict.update(key=(j+1))
-            #for i in key[i]: # not sure about this syntax
-            #    j = i + 1              # make a quick new var to plug in
-            #    sentdict.update(key=j) # or sentdict[key] = j ?
-            #sentdict.update(key=(value+=1))
-            # increment value by 1
-            #pass
-        else: # else condition only happens if it's the first time the word's been seen
-            key.lower()
-            sentdict[key] = 1 # should only happen once
-            sentdict.viewitems()
-        # if/else conditional happens for each word
+    for key in sentlist: # key is just iterator to be consistent throughout conditional
+        if key in sentdict: # if we've seen this key before, increment its value
+            sentdict[key] = 2 # need to generically refer to its value in order to increment value
+        else:
+            sentdict[key] = 1
 
     # return count
     return sentdict
 
+# just for my own testing
 word_count('The kids are okay kids.')
