@@ -4,10 +4,9 @@
 
 import datetime
 
-#where yob = year of birth, mob = month of birth, & dob = day of month of birth
-def add_gigasecond(yob, mob, dob):
-    DOB = datetime.date(yob, mob, dob)
-    print 'Date of Birth:', DOB
+# time_of_birth is a 5-parameter variable
+def add_gigasecond(time_of_birth):
+    print 'Date of Birth including time:', time_of_birth
     gs = datetime.timedelta(seconds=1000000000)
-    gs_day = DOB + gs
-    print 'Date of Gigaseconds on this planet:', gs_day
+    gs_day = time_of_birth + gs
+    return gs_day #always return from a func
